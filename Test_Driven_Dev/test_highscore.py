@@ -7,7 +7,8 @@ import unittest
 import os
 import shutil
 import tempfile
-from highscore import high_score
+
+from Test_Driven_Dev.highscore import high_score
 
 
 class TestHighScore(unittest.TestCase):

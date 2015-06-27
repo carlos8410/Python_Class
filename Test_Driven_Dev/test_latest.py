@@ -5,10 +5,9 @@ The tests do not actually test anything - this is a demo.
 """
 
 import unittest
-import glob
-import os
-import latest
 import time
+
+from Test_Driven_Dev import latest
 
 
 class TestLatest(unittest.TestCase):

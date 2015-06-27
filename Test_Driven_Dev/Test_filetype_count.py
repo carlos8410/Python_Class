@@ -9,8 +9,9 @@ Unit test for fileTypeCount(), including:
 import unittest
 import os
 import tempfile
-from Filetype_count import fileTypeCount
 import shutil
+
+from Test_Driven_Dev.Filetype_count import fileTypeCount
 
 
 class TestFileTypeCount(unittest.TestCase):

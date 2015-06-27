@@ -1,12 +1,13 @@
 #!/usr/local/bin/python3
 
 import unittest
-import zipme
 import os
 import zipfile
 import time
 import shutil
 import tempfile
+
+from Test_Driven_Dev import zipme
 
 
 class TestZipme(unittest.TestCase):
