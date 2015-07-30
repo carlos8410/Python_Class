@@ -43,7 +43,13 @@ class TestZipme(unittest.TestCase):
         zf = zipfile.ZipFile(self.zip_filename)
         files_in_zip = zf.namelist()
         zf.close()
-        expected = set(self.file_names)
+        #expected = set(self.file_names)
+        expected = set()
+        for item in self.file_names:
+            #expected.add(os.path.join(os.path.basename(self.zip_path), item))
+            expected.add(os.path.basename(self.zip_path) + '/' + item)
+        #expected = set(os.path.join(os.path.basename(self.zip_path), self.file_names))
+        print ('expected=', expected)
         observed = set(files_in_zip)
         self.assertEqual(observed, expected)
 

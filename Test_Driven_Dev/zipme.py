@@ -15,13 +15,15 @@ def zip_me(path):
     zf = zipfile.ZipFile(zip_file, 'w', zipfile.ZIP_DEFLATED)
     for fn in file_to_zip:
         # This Zip file doesn't have full directory, only files themselves.
-        zf.write(fn, arcname=os.path.basename(fn))
+        zf.write(fn, arcname=os.path.join(os.path.basename(os.path.dirname(fn)),os.path.basename(fn)))
+
     zf.printdir()
     zf.close()
 
 
 if __name__ == "__main__":
-    path = r'V:\workspace\Archives_Homework\src'
+    #path = r'V:\workspace\Archives_Homework\src'
+    path = r'E:\Desktop\python'
     if not os.path.exists(path):
         os.mkdir(path)
     zip_me(path)
